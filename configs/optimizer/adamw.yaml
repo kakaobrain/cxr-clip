@@ -1,0 +1,5 @@
+name: adamw
+#no_decay: ['bias', 'LayerNorm.weight']
+config:
+  lr: 5e-5
+  weight_decay: 1e-4

@@ -1,0 +1,5 @@
+vindr_cxr:
+  name: "vindr_cxr"
+  data_type: "image_classification"
+  data_path: "datasets/vindr_train.csv"
+  image_size: ${base.image_size}

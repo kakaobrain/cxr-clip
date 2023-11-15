@@ -1,0 +1,7 @@
+base:
+  name: "rsna_pneumonia"
+  data_type: "image_classification"
+  data_path: "datasets/rsna_train.csv"
+  image_size: ${base.image_size}
+  n_class: 1
+  data_frac: ${base.data_frac}

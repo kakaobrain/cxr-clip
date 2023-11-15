@@ -1,0 +1,5 @@
+siim_pneumothorax:
+  name: "siim_pneumothorax"
+  data_type: "image_classification"
+  data_path: "datasets/siim_valid.csv"
+  image_size: ${base.image_size}

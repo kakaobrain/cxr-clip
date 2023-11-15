@@ -1,0 +1,23 @@
+train:
+  RandomResizedCrop:
+    size: ${base.image_size}
+    scale: [0.8, 1.1]
+  CLAHE:
+    clip_limit: 4.0
+  ColorJitter:
+    brightness: 0.1
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+  CenterCrop:
+    size: ${base.image_size}
+valid:
+  Resize:
+    size: ${base.image_size}
+  CenterCrop:
+    size: ${base.image_size}
+test:
+  Resize:
+    size: ${base.image_size}
+  CenterCrop:
+    size: ${base.image_size}

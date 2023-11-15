@@ -1,0 +1,5 @@
+siim_pneumothorax:
+  name: "siim_pneumothorax"
+  data_type: "image_classification"
+  data_path: "datasets/siim_test.csv"
+  n_class: 1

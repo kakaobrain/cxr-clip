@@ -1,0 +1,22 @@
+train:
+  pin_memory: True
+  shuffle: True
+  drop_last: True
+  num_workers: 8
+  prefetch_factor: 16
+  batch_size: 256
+
+valid:
+  pin_memory: True
+  shuffle: False
+  drop_last: False
+  num_workers: 8
+  prefetch_factor: 16
+  batch_size: 128
+
+test:
+  pin_memory: True
+  shuffle: False
+  drop_last: False
+  num_workers: 16
+  batch_size: 128

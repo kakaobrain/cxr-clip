@@ -1,0 +1,4 @@
+mimic_cxr:
+  name: "mimic_cxr"
+  data_type: "imagetext_eval"
+  data_path: "datasets/mimic_cxr_test.csv"

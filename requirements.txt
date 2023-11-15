@@ -1,0 +1,17 @@
+pre-commit
+pillow
+omegaconf
+hydra-core==1.2.0
+torch==1.12.0
+transformers==4.24.0
+torchvision
+tensorboard
+pynvml
+tqdm
+numpy
+scikit-learn
+scipy
+pandas
+timm
+albumentations
+nltk

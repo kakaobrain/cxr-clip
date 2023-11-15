@@ -1,0 +1,30 @@
+defaults:
+  - _self_
+  - data_train:
+    - mimic_cxr
+    - chexpert
+  - data_valid:
+    - mimic_cxr
+    - chexpert
+  - dataloader: dataloader_128
+  - tokenizer: clinical_bert
+  - transform: clahe
+  - model: clip_resnet_clinical
+  - optimizer: adamw
+  - scheduler: cosine_epoch15_warmup1
+  - loss: cxr_clip
+
+base:
+  seed: 1234
+  amp : True
+  image_size: 224
+  text_max_length: 256
+  loss_best: contrastive
+  data_frac: 1.0
+  output:
+    checkpoint: ${hydra:run.dir}/checkpoints/
+    tensorboard: ${hydra:run.dir}/tensorboard/
+
+hydra:
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

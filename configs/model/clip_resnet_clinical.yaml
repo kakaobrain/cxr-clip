@@ -1,0 +1,22 @@
+name: "clip_custom"
+temperature: 0.07
+
+image_encoder:
+  source: "torchvision" # one of { "huggingface"}
+  name: "resnet"
+  pretrained: true
+
+text_encoder:
+  source: "huggingface" # one of { "huggingface"}
+  name: emilyalsentzer/Bio_ClinicalBERT
+  pretrained: true
+  gradient_checkpointing: false
+  pooling: "eos" # one of { "eos" | "bos" | "mean" }
+  cache_dir: "huggingface/"
+  trust_remote_code: true
+  mlm_head: true
+
+projection_head: # optional
+  name: "linear" # one of { "linear" | "mlp" }
+  dropout: 0.1
+  proj_dim: 512

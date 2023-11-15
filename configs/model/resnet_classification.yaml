@@ -1,0 +1,13 @@
+name: "finetune_classification"
+load_backbone_weights: null
+freeze_backbone_weights: true
+
+image_encoder:
+  source: "torchvision" # one of { "huggingface"}
+  name: "resnet"
+  pretrained: true
+
+classifier:
+  config:
+    name: "linear"
+    n_class: ${data_train.base.n_class}

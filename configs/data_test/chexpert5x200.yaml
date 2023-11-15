@@ -1,0 +1,4 @@
+chexpert5x200:
+  name: "chexpert5x200"
+  data_type: "imagetext_eval"
+  data_path: "datasets/chexpert5x200.csv"

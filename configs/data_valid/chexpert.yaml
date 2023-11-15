@@ -1,0 +1,7 @@
+chexpert:
+  name: "chexpert"
+  data_type: "imagetext"
+  data_path: "datasets/chexpert_valid.csv"
+  image_size: ${base.image_size}
+  text_max_length: ${base.text_max_length}
+  prompt_from_json: true

@@ -1,0 +1,32 @@
+defaults:
+  - _self_
+  - data_train:
+    - rsna_pneumonia # {siim_pneumothorax | vindr_cxr | rsna_pneumonia | chexpert5x200_class}
+  - data_valid:
+    - rsna_pneumonia # {siim_pneumothorax | vindr_cxr | rsna_pneumonia | chexpert5x200_class}
+  - dataloader: dataloader_256
+  - transform: clahe
+  - model: resnet_classification
+  - optimizer:
+    - adamw
+  - scheduler:
+    - cosine_epoch30_warmup3
+  - loss: classification
+
+model:
+  load_backbone_weights: ???
+  freeze_backbone_weights: true
+
+base:
+  seed: 1234
+  amp : True
+  image_size: 224
+  loss_best: classification
+  data_frac: 1.0
+  output:
+    checkpoint: ${hydra:run.dir}/checkpoints/
+    tensorboard: ${hydra:run.dir}/tensorboard/
+
+hydra:
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

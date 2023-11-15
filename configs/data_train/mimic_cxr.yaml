@@ -1,0 +1,7 @@
+mimic_cxr:
+  name: "mimic_cxr"
+  data_type: "imagetext"
+  data_path: "datasets/mimic_train.csv"
+  image_size: ${base.image_size}
+  text_max_length: ${base.text_max_length}
+  data_frac: 1.0

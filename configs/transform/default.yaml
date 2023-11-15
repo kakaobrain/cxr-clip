@@ -1,0 +1,15 @@
+train:
+  ResizedCrop:
+    size: ${base.image_size}
+  CenterCrop:
+    size: ${base.image_size}
+valid:
+  Resize:
+    size: ${base.image_size}
+  CenterCrop:
+    size: ${base.image_size}
+test:
+  Resize:
+    size: ${base.image_size}
+  CenterCrop:
+    size: ${base.image_size}

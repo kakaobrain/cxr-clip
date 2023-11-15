@@ -1,0 +1,5 @@
+vindr_cxr:
+  name: "vindr_cxr"
+  data_type: "image_classification"
+  data_path: "datasets/vindr_test.csv"
+  n_class: 18

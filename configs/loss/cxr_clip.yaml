@@ -1,0 +1,5 @@
+cxr_clip:
+  label_smoothing: 0.0
+  i2i_weight: 1.0
+  t2t_weight: 0.5
+  loss_ratio: 1.0

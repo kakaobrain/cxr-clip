@@ -1,0 +1,41 @@
+defaults:
+  - _self_
+  - data_test:
+    - vindr_cxr
+    - rsna_pneumonia
+    - siim_pneumothorax
+    - chexpert5x200
+    - mimic_cxr
+    - openi
+  - dataloader: dataloader_128
+  - transform: default
+  - tokenizer: clinical_bert
+
+base:
+  image_size: 224
+
+test:
+  checkpoint: ??? # required
+  seed: 1234
+
+hydra:
+  run:
+    dir: ./eval_outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: "%(message)s"
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        filename: ${hydra.run.dir}/evaluate.log
+        formatter: simple
+    root:
+      level: INFO
+      handlers: [file, console]
+    disable_existing_loggers: false

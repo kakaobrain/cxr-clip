@@ -1,0 +1,14 @@
+name: "finetune_classification"
+load_backbone_weights: null
+freeze_backbone_weights: true
+
+image_encoder:
+  source: "huggingface" # one of { "huggingface"}
+  name: 'microsoft/swin-tiny-patch4-window7-224'
+  pretrained: true
+  model_type: 'swin'
+
+classifier:
+  config:
+    name: "linear"
+    n_class: ${data_train.base.n_class}

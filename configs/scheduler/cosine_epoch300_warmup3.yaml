@@ -1,0 +1,4 @@
+name: "cosine" # one of ["cosine", "constant"]
+config:
+  total_epochs: 300
+  warmup_epochs: 0.1
