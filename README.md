@@ -32,8 +32,8 @@ MIMIC-CXR (**M**), MIMIC-CXR + CheXpert (**M,C**), MIMIC-CXR + CheXpert + ChestX
 
 | model / dataset |  M  | M,C | M,C,C14 | 
 |---------------|--------------------|------------------------|-|
-| ResNet50      |  [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/f982386ef38aa3ecd6ce1f8f928e8aa8/r50_m.tar)   |   [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/f7ebbe4ad815868905d0820dbbde3662/r50_mc.tar)  | [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/de4b5e4ae2047c1fb7960ddcd8d861cb/r50_mcc.tar) |
-| SwinTiny      |  [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/a21ef120894e072ae77434daf6b98b72/swint_m.tar)   |   [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/97cbbdfb347d22ea44e95a70c7b0520a/swint_mc.tar)   | [Link](https://arena.kakaocdn.net/brainrepo/models/cxr-clip/a25ce760064591c899f67c97ed7790de/swint_mcc.tar) |
+| ResNet50      |  [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/f982386ef38aa3ecd6ce1f8f928e8aa8/r50_m.tar)   |   [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/f7ebbe4ad815868905d0820dbbde3662/r50_mc.tar)  | [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/de4b5e4ae2047c1fb7960ddcd8d861cb/r50_mcc.tar) |
+| SwinTiny      |  [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/a21ef120894e072ae77434daf6b98b72/swint_m.tar)   |   [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/97cbbdfb347d22ea44e95a70c7b0520a/swint_mc.tar)   | [Link](https://twg.kakaocdn.net/brainrepo/models/cxr-clip/a25ce760064591c899f67c97ed7790de/swint_mcc.tar) |
 
 ## Pre-Train model
 ### command line
