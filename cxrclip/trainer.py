@@ -215,7 +215,7 @@ def train(model, device, loss_func, optimizer, scheduler, dataloader, epoch, tot
         util.GlobalEnv.get().summary_writer.global_step = scheduler._step_count
 
         for k in loss_dict:
-            avg_loss_dict[k] += loss_dict[k]
+            avg_loss_dict[k] += loss_dict[k].item()
 
         if idx % print_step == 0 and util.GlobalEnv.get().local_rank < 1:
             for k, lr in enumerate(scheduler.get_last_lr()):
@@ -271,7 +271,7 @@ def validate(model, device, loss_func, dataloader_dict, epoch, total_epochs, loc
                         loss_dict[loss_key] = loss_dict[loss_key] / util.GlobalEnv.get().world_size
 
                 for loss_key in loss_dict:
-                    avg_loss_dict[loss_key] += loss_dict[loss_key]
+                    avg_loss_dict[loss_key] += loss_dict[loss_key].item()
 
                 if (idx % print_step == 0 or idx == len(dataloader) - 1) and local_rank < 1:
                     progress_iter.set_postfix(
